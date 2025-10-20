@@ -18,7 +18,6 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,11 +26,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     # Third party apps
     'rest_framework',
     'corsheaders',
-    
+
     # Local apps
     'membership',
 ]
@@ -143,7 +142,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    "http://127.0.0.1:5500"
+    "http://127.0.0.1:5500",  # ← FIXED: Added missing comma
     "http://34.121.96.213",
 ]
 
@@ -175,5 +174,4 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://34.121.96.213',  # Add your server IP
     'http://34.121.96.213:8000',  # If Django runs on port 8000
-
 ]
