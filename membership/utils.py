@@ -101,7 +101,7 @@ def generate_certificate(member):
     c.drawCentredString(3 * inch, sig_y - 0.3 * inch, "Party Secretary General")
 
     c.line(7 * inch, sig_y, 9 * inch, sig_y)
-    c.drawCentredString(8 * inch, sig_y - 0.3 * inch, "Party Leader")
+    c.drawCentredString(8 * inch, sig_y - 0.3 * inch, "Party Chairman")
 
     c.setFont("Helvetica", 9)
     c.setFillColor(dark_gray)
