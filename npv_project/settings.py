@@ -12,7 +12,11 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-this-in-produc
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
-ALLOWED_HOSTS = ['34.121.96.213']
+ALLOWED_HOSTS = [
+    '34.121.96.213',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -140,6 +144,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:5500"
+    "http://34.121.96.213",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -168,4 +173,7 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='NPV Party <noreply@np
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
+    'http://34.121.96.213',  # Add your server IP
+    'http://34.121.96.213:8000',  # If Django runs on port 8000
+
 ]
