@@ -11,7 +11,9 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-this-in-produc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = ['104.197.71.24']
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -64,13 +66,28 @@ WSGI_APPLICATION = 'npv_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-       'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-   }
- }
+# DATABASES = {
+#        'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#          'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#  }
 
+
+DATABASES = {
+    "default": {
+        # "ENGINE": "django.db.backends.sqlite3",
+        # "NAME": BASE_DIR / "db.sqlite3",
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'membership',
+        'USER': 'admin',
+        'PASSWORD': '6133655Al.',
+        'HOST': 'localhost',
+        'PORT': '',
+
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
